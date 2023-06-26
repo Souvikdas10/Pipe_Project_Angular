@@ -1,0 +1,91 @@
+<!-- <p>pipe-display works!</p> -->
+<div class="container mx-auto m-5">
+    <div class="row">
+        <br>
+        <span class="border border-success">
+            <div class="col-sm">
+                <h2 class="mx-auto" style="width:250px">Emaples Of Pipes</h2>
+                <!-- <div class="pipeDiv"> -->
+                <hr>
+                <!-- case related pipe -->
+                <p>{{title1}}</p>
+                <b> Uppercase: {{title1 | uppercase}}</b> <br>
+                <hr>
+
+                <p>{{title2}}</p>
+                <b> Lowercase: {{title2 | lowercase}}</b><br>
+                <hr>
+                <p>{{fullname}}</p>
+                <b>Titlecase: {{fullname | titlecase}}</b>
+                <hr>
+
+                <!-- date related pipe -->
+
+                <!-- old date -->
+                <p><b>Old withOut pipe :: </b>{{oldDate}}</p>
+                <p><b>Old with pipe :: </b>{{oldDate |date}}</p>
+                <p><b>Old with pipe :: </b>{{oldDate | date :'hh:mm:ss'}}</p>
+
+
+
+                <b>Today :: </b>{{todayDate}} <br>
+                <b>Month/Year :: </b>{{todayDate | date :'M/y'}}<br>
+                <b>Month/Date/Year :: </b>{{todayDate | date:'MM/dd/yy'}}<br>
+                <b>Date/Month/Year :: </b>{{todayDate | date:'dd/MM/yyyy'}}<br>
+
+                <b>ShortTime :: </b>{{todayDate | date: 'shortTime'}} <br>
+                <b>Medium :: </b> {{todayDate | date: 'medium'}} <br>
+                <b>FullTime :: </b>{{todayDate | date:'fullTime'}} <br>
+                <br><br>
+                <hr>
+
+
+
+                <!-- Number RElated pipes -->
+                <p>Decimal number: 123.012745</p>
+                <b>3-3 :: {{123.012745 | number: '3.3-3'}}</b> <br>
+                <b>8-8 :: {{123.012745 | number: '4.8-8'}}</b>
+                <p>Parcent :1.234</p>
+                <b> Percent: {{1.234| percent}}</b>
+                <hr>
+
+
+                <!-- Price related pipe -->
+                <p>{{price}}</p>
+                <p>{{price | currency:'INR'}}</p>
+                <p>{{price | currency:'INR':'code'}}</p>
+                <p>{{price | currency:'INR':'Indian Rupee'}}</p>
+                <p>{{price | currency:'INR':'symbol':'3.3-3'}}</p>
+                <hr>
+
+                <!-- json pipe -->
+                <p>json pipe</p>
+                <b>{{jsonVal| json}}</b>
+                <hr>
+
+
+                <!-- slice pipe -->
+
+                <p>slice pipe</p>
+                <b>{{color | slice:2:5}}</b>
+                <hr>
+                <!-- chain pipe -->
+                <p>Chain Pipe</p>
+                <b>{{newday | date | lowercase }}</b>
+                <p>{{fullname}}</p>
+                <p>{{fullname |titlecase | slice:0:12}}</p>
+                <hr>
+
+
+                <p>Custom Pipe</p>
+
+                <p>Squre of 32 :{{32 | square }}</p>
+
+                <p> cube of 3 :{{3 | square}}</p>
+
+                <b>Multiplication {{15 | multiple :15:15}}</b>
+                <p>{{-123|convert}}</p>
+            </div>
+        </span>
+    </div>
+</div>
